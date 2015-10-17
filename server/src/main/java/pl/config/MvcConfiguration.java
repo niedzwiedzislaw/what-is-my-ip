@@ -27,27 +27,9 @@ import java.util.List;
 @EnableWebMvc
 public class MvcConfiguration extends WebMvcConfigurerAdapter {
 
-    @Override
-    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
-        GsonHttpMessageConverter gsonHttpMessageConverter = new GsonHttpMessageConverter();
-        gsonHttpMessageConverter.setGson(gson());
-
-        converters.add(new ByteArrayHttpMessageConverter());
-        converters.add(new LongHttpMessageConverter());
-        converters.add(new StringHttpMessageConverter());
-        converters.add(gsonHttpMessageConverter);
-    }
-
-    private Gson gson() {
-        return new GsonBuilder()
-                .setDateFormat(DataFormat.DATE)
-                .setPrettyPrinting()
-                .setExclusionStrategies(new GsonExclude.ExclusionStrategy())
-                .create();
-    }
-
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
         return new PropertySourcesPlaceholderConfigurer();
     }
+
 }
