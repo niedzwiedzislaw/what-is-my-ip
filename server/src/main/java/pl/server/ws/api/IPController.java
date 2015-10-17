@@ -1,4 +1,4 @@
-package pl.server.ws.api.v1;
+package pl.server.ws.api;
 
 
 import org.slf4j.Logger;
