@@ -19,7 +19,7 @@ public class LoggingBeanPostProcessor implements BeanPostProcessor {
         for (Field field : fields) {
             if (Logger.class.isAssignableFrom(field.getType()) && field.getAnnotation(Logging.class) != null) {
                 try {
-                    boolean access = field.isAccessible();
+                    boolean access = field.canAccess(bean);
                     field.setAccessible(true);
                     field.set(bean, LoggerFactory.getLogger(bean.getClass()));
                     field.setAccessible(access);
