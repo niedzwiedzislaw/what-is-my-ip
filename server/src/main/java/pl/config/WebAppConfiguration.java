@@ -15,7 +15,7 @@ import javax.annotation.PreDestroy;
         "pl.util"
 })
 public class WebAppConfiguration {
-    private static Logger logger = LoggerFactory.getLogger(WebAppConfiguration.class.getSimpleName());
+    private static final Logger logger = LoggerFactory.getLogger(WebAppConfiguration.class.getSimpleName());
 
     @PostConstruct
     public void postConstruct() {

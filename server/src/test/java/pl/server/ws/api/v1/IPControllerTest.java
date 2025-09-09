@@ -5,8 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.MockitoAnnotations;
-
-@RunWith(JUnitParamsRunner.class)
+''
 public class IPControllerTest {
 
     @Before
