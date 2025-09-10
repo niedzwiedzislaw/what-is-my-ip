@@ -1,6 +1,5 @@
 package pl.server.ws.api.v1;
 
-import junitparams.JUnitParamsRunner;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
